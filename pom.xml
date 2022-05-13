@@ -15,12 +15,38 @@
 
     <dependencies>
 
+        <!-- 
+            The tests run as expected using Pioneer 1.5.0. They fail using 1.6.x and 1.7.0.
+        -->
+
         <!-- https://mvnrepository.com/artifact/org.junit-pioneer/junit-pioneer -->
         <dependency>
             <groupId>org.junit-pioneer</groupId>
             <artifactId>junit-pioneer</artifactId>
             <version>1.7.0</version>
             <scope>test</scope>
+
+            <!-- Uncomment the following if you change the version to 1.5.0 or 1.6.x -->
+            <!--
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-params</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.junit.platform</groupId>
+                    <artifactId>junit-platform-commons</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.junit.platform</groupId>
+                    <artifactId>junit-platform-launcher</artifactId>
+                </exclusion>
+            </exclusions>
+            -->
         </dependency>
 
     </dependencies>
